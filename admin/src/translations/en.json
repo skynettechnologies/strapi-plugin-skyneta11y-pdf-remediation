@@ -1,0 +1,7 @@
+{
+  "plugin.name": "SkynetA11y PDF Remediation",
+  "plugin.description": "AI-powered PDF accessibility remediation",
+  "tabs.upload": "Upload",
+  "tabs.scan": "Website Scan",
+  "tabs.remediated": "Remediated"
+}

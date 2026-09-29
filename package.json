@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "pdf",
+    "accessibility",
+    "remediation",
+    "ada",
+    "wcag",
+    "ai"
+  ],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "source": "./admin/src/index.js",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "styles": "node scripts/build-styles.js",
+    "build": "node scripts/build-styles.js && strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test": "node test/config.mjs && node test/smoke.mjs && node test/settings.mjs",
+    "prepublishOnly": "node scripts/build-styles.js && strapi-plugin build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@strapi/design-system": "^2.2.4",
+    "@strapi/icons": "^2.2.4",
+    "@strapi/sdk-plugin": "^6.1.1",
+    "@strapi/strapi": "^5.52.3",
+    "esbuild": "^0.25.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.9.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^6.8.9",
+    "react-router-dom": "^6.30.6",
+    "styled-components": "^6.5.3",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "@strapi/design-system": "^2.2.4",
+    "@strapi/icons": "^2.2.4",
+    "@strapi/sdk-plugin": "^6.1.1",
+    "@strapi/strapi": "^5.55.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^6.8.9",
+    "react-router-dom": "^6.30.6",
+    "styled-components": "^6.5.3"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "strapi-plugin-skyneta11y-pdf-remediation",
+    "displayName": "SkynetA11y PDF Remediation",
+    "description": "AI-powered PDF accessibility remediation - upload PDFs, scan website PDFs, and download remediated files."
+  },
+  "name": "strapi-plugin-skyneta11y-pdf-remediation",
+  "description": "AI-powered PDF accessibility remediation for Strapi 5.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/skynettechnologies/strapi-plugin-skyneta11y-pdf-remediation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skynettechnologies/strapi-plugin-skyneta11y-pdf-remediation/issues"
+  },
+  "homepage": "https://github.com/skynettechnologies/strapi-plugin-skyneta11y-pdf-remediation#readme",
+  "author": "Skynet Technologies USA LLC <developer3@skynettechnologies.com>"
+}
